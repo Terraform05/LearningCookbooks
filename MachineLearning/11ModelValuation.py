@@ -27,6 +27,9 @@ from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
+import matplotlib
+matplotlib.use('Agg') # Use the 'Agg' backend to avoid displaying plots
+
 print('=======================|cross validation|=======================')
 
 # Load digits dataset
@@ -360,6 +363,7 @@ target_predicted = model.labels_
 # Evaluate model
 print(silhouette_score(features, target_predicted))
 
+"""
 print('=======================|custom eval metric|=======================')
 
 # Load libraries
@@ -401,7 +405,7 @@ target_predicted = model.predict(features_test)
 
 # Calculate r-squared score
 print(r2_score(target_test, target_predicted))
-
+"""
 print('=======================|training set size visualize|=======================')
 
 # Load libraries

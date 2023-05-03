@@ -2,6 +2,10 @@
 import pandas as pd
 import cv2
 import numpy as np
+
+import matplotlib
+matplotlib.use('Agg') # Use the 'Agg' backend to avoid displaying plots
+
 from matplotlib import pyplot as plt
 
 print('=======================|load images|=======================')

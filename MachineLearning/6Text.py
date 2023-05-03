@@ -49,23 +49,22 @@ print(remove_periods)
 
 # Create function
 
-
+"""
 def capitalizer(string: str) -> str:
     return string.upper()
-
 
 # Apply function
 caps = [capitalizer(string) for string in remove_periods]
 
 print(caps)
-
+"""
 print('=======================|regex|=======================')
 
 # Import library
 
 # Create function
 
-
+"""
 def replace_letters_with_X(string: str) -> str:
     return re.sub(r"[a-zA-Z]", "X", string)
 
@@ -74,7 +73,7 @@ def replace_letters_with_X(string: str) -> str:
 regex = [replace_letters_with_X(string) for string in remove_periods]
 
 print(regex)
-
+"""
 print('=======================|parse clean html|=======================')
 
 # Load library
@@ -90,7 +89,7 @@ soup = BeautifulSoup(html, "lxml")
 
 # Find the div with the class "full_name", show text
 print(soup.find("div", {"class": "full_name"}).text)
-
+"""
 print('=======================|remove punctuation|=======================')
 # Load libraries
 
@@ -106,7 +105,7 @@ punctuation = dict.fromkeys(i for i in range(
 # For each string, remove any punctuation characters
 translated = [string.translate(punctuation) for string in text_data]
 print(translated)
-
+"""
 print('=======================|tokenizing words|=======================')
 
 # Load library

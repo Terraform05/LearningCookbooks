@@ -9,15 +9,19 @@ To install required packages from [requirements.txt](requirements.txt), run:
 
     pip install -r requirements.txt
 
-1. scipy
-2. numpy
-3. sqlalchemy
-4. pandas
-5. matplotlib
-6. scikit-learn
-7. openpyxl
-8. nltk
-9. bs4
-10. lxml
-11. opencv-python
-12. seaborn
+## File Execution Time
+##### plots generated normally while plt.show() supressed for execution time calculations
+
+| File Name | Execution Time |
+| --- | --- |
+| 1NumPyIntro.py | 0.26 seconds |
+| 2LoadingData.py | 1.72 seconds |
+| 3DataWrangling.py | 1.34 seconds |
+| 4NumericalData.py | 0.84 seconds |
+| 5CategoricalData.py | 0.76 seconds |
+| 6Text.py | 1.46 seconds |
+| 7DateTime.py | 0.50 seconds |
+| 8Images.py | 1.01 seconds |
+| 9DimensionalityReductionFeatureExtraction.py | 8.65 seconds |
+| 10DimensionalityReductionFeatureSelection.py | 0.70 seconds |
+| 11ModelValuation.py | 28.75 seconds |
