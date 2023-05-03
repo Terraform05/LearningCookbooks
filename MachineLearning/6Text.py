@@ -89,7 +89,7 @@ soup = BeautifulSoup(html, "lxml")
 
 # Find the div with the class "full_name", show text
 print(soup.find("div", {"class": "full_name"}).text)
-"""
+
 print('=======================|remove punctuation|=======================')
 # Load libraries
 
@@ -105,7 +105,7 @@ punctuation = dict.fromkeys(i for i in range(
 # For each string, remove any punctuation characters
 translated = [string.translate(punctuation) for string in text_data]
 print(translated)
-"""
+
 print('=======================|tokenizing words|=======================')
 
 # Load library
