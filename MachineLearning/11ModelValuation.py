@@ -27,9 +27,6 @@ from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
-import matplotlib
-matplotlib.use('Agg') # Use the 'Agg' backend to avoid displaying plots
-
 print('=======================|cross validation|=======================')
 
 # Load digits dataset
