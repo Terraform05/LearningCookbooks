@@ -1,0 +1,12 @@
+scipy
+numpy
+sqlalchemy
+pandas
+matplotlib
+scikit-learn
+openpyxl
+nltk
+bs4
+lxml
+opencv-python
+seaborn

@@ -85,7 +85,7 @@ corr_matrix = dataframe.corr().abs()
 
 # Select upper triangle of correlation matrix
 upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape),
-                          k=1).astype(np.bool))
+                          k=1).astype(np.bool_))
 
 # Find index of feature columns with correlation greater than 0.95
 to_drop = [column for column in upper.columns if any(upper[column] > 0.95)]
@@ -141,6 +141,7 @@ features_kbest = fvalue_selector.fit_transform(features, target)
 print("Original number of features:", features.shape[1])
 print("Reduced number of features:", features_kbest.shape[1])
 
+""" #too long to run on no bueno computer
 print('=======================|recursive elim of features|=======================')
 
 # Load libraries
@@ -170,3 +171,4 @@ print(rfecv.support_)
 
 # Rank features best (1) to worst
 print(rfecv.ranking_)
+"""

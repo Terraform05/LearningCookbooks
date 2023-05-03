@@ -55,7 +55,7 @@ print('Target Vector\n', target[:3])
 
 print('Finally, if we want a dataset designed to work well with clustering techniques, scikit-learn offers make_blobs:')
 # Load library
-#from sklearn.datasets import make_blobs
+# from sklearn.datasets import make_blobs
 
 # Generate feature matrix and target vector
 features, target = make_blobs(n_samples=100,
@@ -145,10 +145,10 @@ dataframe.head(2)
 #from sqlalchemy import create_engine
 
 # Create a connection to the database
-database_connection = create_engine('sqlite:///sample.db')
+#database_connection = create_engine('sqlite:///sample.db')
 
 # Load data
-dataframe = pd.read_sql_query('SELECT * FROM data', database_connection)
+#dataframe = pd.read_sql_query('SELECT * FROM data', database_connection)
 
 # View first two rows
-dataframe.head(2)
+#dataframe.head(2)

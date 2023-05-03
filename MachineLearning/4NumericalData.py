@@ -238,7 +238,7 @@ age = np.array([[6],
                 [65]])
 
 # Create binarizer
-binarizer = Binarizer(18)
+binarizer = Binarizer()
 
 # Transform feature
 binarizer.fit_transform(age)
@@ -310,6 +310,7 @@ dataframe.dropna()
 print('=======================================================')
 #inputing missing values
 
+"""# I can't get KNN to work on macos. uncomment if you have fancyimpute KNN installed and working.
 # Load libraries
 import numpy as np
 from fancyimpute import KNN
@@ -348,3 +349,4 @@ features_mean_imputed = mean_imputer.fit_transform(features)
 # Compare true and imputed values
 print("True Value:", true_value)
 print("Imputed Value:", features_mean_imputed[0,0])
+"""

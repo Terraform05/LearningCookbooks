@@ -17,7 +17,8 @@ from sklearn.dummy import DummyClassifier
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LinearRegression
 from sklearn.dummy import DummyRegressor
-from sklearn.datasets import load_boston
+data_url = "http://lib.stat.cmu.edu/datasets/boston"
+#from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 from sklearn import datasets
 from sklearn import metrics
@@ -94,10 +95,14 @@ print('=======================|baseline regression model|=======================
 # Load libraries
 
 # Load data
-boston = load_boston()
+#boston = load_boston()
+raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+target = raw_df.values[1::2, 2]
 
 # Create features
-features, target = boston.data, boston.target
+#features, target = boston.data, boston.target
+features, target = data, target
 
 # Make test and training split
 features_train, features_test, target_train, target_test = train_test_split(

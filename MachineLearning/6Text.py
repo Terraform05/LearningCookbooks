@@ -15,6 +15,11 @@ import unicodedata
 from bs4 import BeautifulSoup
 import re
 from sklearn.preprocessing import MultiLabelBinarizer
+from nltk import download
+download('punkt')
+download('stopwords')
+download('averaged_perceptron_tagger')
+download('brown')
 
 print('=======================|textcleaning|=======================')
 

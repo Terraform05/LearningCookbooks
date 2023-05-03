@@ -32,7 +32,8 @@ new_person = pd.Series(['Molly Mooney', 40, True],
                        index=['Name', 'Age', 'Driver'])
 
 # Append row
-dataframe.concat(new_person, ignore_index=True)
+#dataframe.concat(new_person, ignore_index=True)
+pd.concat([dataframe, new_person], ignore_index=True)
 
 print(dataframe)
 
@@ -285,16 +286,16 @@ dataframe = pd.read_csv(url)
 
 # Group rows by the values of the column 'Sex', calculate mean
 # of each group
-dataframe.groupby('Sex').mean()
+#dataframe.groupby('Sex').mean()
 
 # Group rows
-dataframe.groupby('Sex')
+#dataframe.groupby('Sex')
 
 # Group rows, count rows
-dataframe.groupby('Survived')['Name'].count()
+#dataframe.groupby('Survived')['Name'].count()
 
 # Group rows, calculate mean
-dataframe.groupby(['Sex', 'Survived'])['Age'].mean()
+#dataframe.groupby(['Sex', 'Survived'])['Age'].mean()
 
 # Load libraries
 
@@ -389,8 +390,8 @@ pd.concat([dataframe_a, dataframe_b], axis=1)
 # Create row
 row = pd.Series([10, 'Chris', 'Chillon'], index=['id', 'first', 'last'])
 
-# Append row
-dataframe_a.append(row, ignore_index=True)
+# Append row (append is depreciated. now use concat)
+df = pd.concat([dataframe_a, pd.DataFrame([row])], ignore_index=True)
 
 # Load library
 

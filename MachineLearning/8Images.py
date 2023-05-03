@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 print('=======================|load images|=======================')
 
 # Load image as grayscale
-image = cv2.imread("images\plane.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane.jpg", cv2.IMREAD_GRAYSCALE)
 # Show image
 plt.imshow(image, cmap="gray"), plt.axis("off")
 
@@ -27,7 +27,7 @@ print('image resolution and mat dimensions: ', image.shape)
 print('first pixel: ', image[0, 0])
 
 # Load image in color
-image_bgr = cv2.imread("images/plane.jpg", cv2.IMREAD_COLOR)
+image_bgr = cv2.imread("MachineLearning/images/plane.jpg", cv2.IMREAD_COLOR)
 
 # Show pixel
 print(image_bgr[0, 0])
@@ -45,17 +45,17 @@ print('=======================|save image for preprocessing|====================
 # Load libraries
 
 # Load image as grayscale (read filepath)
-image = cv2.imread("images/plane.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Save new image (write to filepath)
-print(cv2.imwrite("images/plane_new.jpg", image))
+print(cv2.imwrite("MachineLearning/images/plane_new.jpg", image))
 
 print('=======================|resize images|=======================')
 
 # Load image
 
 # Load image as grayscale
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Resize image to 50 pixels by 50 pixels
 image_50x50 = cv2.resize(image, (50, 50))
@@ -69,7 +69,7 @@ print('=======================|crop images|=======================')
 # Load image
 
 # Load image in grayscale
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Select first half of the columns and all rows
 image_cropped = image[:, :128]
@@ -83,7 +83,7 @@ print('=======================|blur images|=======================')
 # Load libraries
 
 # Load image as grayscale
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Blur image (averages 5x5 radius around kernel)
 image_blurry = cv2.blur(image, (5, 5))
@@ -122,7 +122,7 @@ print('=======================|sharpen image|=======================')
 # Load libraries
 
 # Load image as grayscale
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Create kernel
 kernel = np.array([[0, -1, 0],
@@ -141,7 +141,7 @@ print('=======================|enhance contrast gray|=======================')
 # Load libraries
 
 # Load image
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Enhance image
 image_enhanced = cv2.equalizeHist(image)
@@ -153,7 +153,7 @@ plt.show()
 print('=======================|enhance contrast color convert to YUV|=======================')
 
 # Load image
-image_bgr = cv2.imread("images/plane.jpg")
+image_bgr = cv2.imread("MachineLearning/images/plane.jpg")
 
 # Convert to YUV
 image_yuv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2YUV)  # or COLOR_RGB2YUV
@@ -173,7 +173,7 @@ print('=======================|isolating colors color convert to HSV|===========
 # Load libraries
 
 # Load image
-image_bgr = cv2.imread('images/plane_256x256.jpg')
+image_bgr = cv2.imread('MachineLearning/images/plane_256x256.jpg')
 
 # Convert BGR to HSV (hue saturation value)
 image_hsv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2HSV)
@@ -205,7 +205,7 @@ print('=======================|binarize image|=======================')
 # Load libraries
 
 # Load image as grayscale
-image_grey = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image_grey = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Apply adaptive thresholding
 max_output_value = 255
@@ -238,7 +238,7 @@ print('=======================|remove backgrounds|=======================')
 # Load library
 
 # Load image and convert to RGB
-image_bgr = cv2.imread('images/plane_256x256.jpg')
+image_bgr = cv2.imread('MachineLearning/images/plane_256x256.jpg')
 image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
 
 # Rectangle values: start x, start y, width, height
@@ -283,7 +283,7 @@ print('=======================|edge detection|=======================')
 # Load library
 
 # Load image as grayscale
-image_gray = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image_gray = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Calculate median intensity
 median_intensity = np.median(image_gray)
@@ -303,7 +303,7 @@ print('=======================|corner detection|=======================')
 # Load libraries
 
 # Load image as grayscale
-image_bgr = cv2.imread("images/plane_256x256.jpg")
+image_bgr = cv2.imread("MachineLearning/images/plane_256x256.jpg")
 image_gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY)
 image_gray = np.float32(image_gray)
 
@@ -337,7 +337,7 @@ plt.show()
 print('=======================|potential corners|=======================')
 
 # Load images
-image_bgr = cv2.imread('images/plane_256x256.jpg')
+image_bgr = cv2.imread('MachineLearning/images/plane_256x256.jpg')
 image_gray = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2GRAY)
 
 # Number of corners to detect
@@ -369,10 +369,10 @@ print('=======================|machine learning create features|================
 # Load image
 import cv2
 import numpy as np
-from matplotlib import plt as plt
+from matplotlib import pyplot as plt
 
 # Load image as grayscale
-image = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Resize image to 10 pixels by 10 pixels
 image_10x10 = cv2.resize(image, (10, 10))
@@ -388,7 +388,7 @@ print(image_10x10.shape)
 print(image_10x10.flatten().shape)
 
 # Load image in color
-image_color = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_COLOR)
+image_color = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_COLOR)
 
 # Resize image to 10 pixels by 10 pixels
 image_color_10x10 = cv2.resize(image_color, (10, 10))
@@ -397,13 +397,13 @@ image_color_10x10 = cv2.resize(image_color, (10, 10))
 print(image_color_10x10.flatten().shape)
 
 # Load image in grayscale
-image_256x256_gray = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
+image_256x256_gray = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Convert image data to one-dimensional vector, show dimensions
 print(image_256x256_gray.flatten().shape)
 
 # Load image in color
-image_256x256_color = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_COLOR)
+image_256x256_color = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_COLOR)
 
 # Convert image data to one-dimensional vector, show dimensions
 print(image_256x256_color.flatten().shape)
@@ -416,7 +416,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load image as BGR
-image_bgr = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_COLOR)
+image_bgr = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_COLOR)
 
 # Calculate the mean of each channel
 channels = cv2.mean(image_bgr)
@@ -439,7 +439,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load image
-image_bgr = cv2.imread("images/plane_256x256.jpg", cv2.IMREAD_COLOR)
+image_bgr = cv2.imread("MachineLearning/images/plane_256x256.jpg", cv2.IMREAD_COLOR)
 
 # Convert to RGB
 image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
