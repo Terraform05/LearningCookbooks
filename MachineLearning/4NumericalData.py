@@ -175,7 +175,6 @@ feature = features[:, 0]
 
 # Create a function to return index of outliers
 
-
 def indicies_of_outliers(x):
     q1, q3 = np.percentile(x, [25, 75])
     iqr = q3 - q1

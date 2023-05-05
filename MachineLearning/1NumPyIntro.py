@@ -74,10 +74,8 @@ matrix = np.array([[1, 2, 3],
 
 # Create function that adds 100 to something
 # lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.
-# #add_100 = lambda i: i + 100
-
-
-def add_100(i): return i + 100
+add_100 = lambda i: i + 100 # the equivalent functino is commented below
+#def add_100(i): return i + 100
 
 
 # Create vectorized function
